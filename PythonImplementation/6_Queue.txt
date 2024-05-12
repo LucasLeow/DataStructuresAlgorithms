@@ -1,0 +1,66 @@
+- Keywords:
+    - Queue Intro
+    - Implementation of Queue in different languages
+    - Python Queue implementation using List (not recommended) (dynamic array)
+    - Python Queue implementation using deque
+
+
+== Queue Intro ==
+    - First in, First out (FIFO) | Last in, Last out (LILO)
+
+    - can solve Producer Consumer problem (promote loose coupling)
+    - Producer pushes info to Queue
+    - Consumer consumes info from queue
+        - Multiple consumer may reference same queue
+        - thus, consumer & producer are decoupled]
+
+== Implementation of Queue in different languages ==
+    - Python: list, collections.deque, queue.LifoQueue
+    - Java: LinkedList: Queue<Integer> q = new LinkedList<>();
+    - c++: std::queue: std::queue<int> q;
+
+
+== Python Queue implementation using List (not recommended) (dynamic array) ==
+    - dynamic array, once reach limit, need to copy and paste to new memory location (inefficient)
+
+    # Always insert at 0 index, the rest gets pushed back
+    stock_prices = []
+    stock_prices.insert(0, 131.1)
+    stock_prices.insert(0, 132.1)
+    stock_prices.insert(0, 131.5)
+
+    stock_prices.pop()
+    stock_prices.pop()
+    stock_prices.pop()
+
+
+== Python Queue implementation using deque ==
+    - deque: double ended queue, can be used as stack or queue
+
+    from collections import deque
+    q = deque()
+    q.appendleft(5)
+    q.appendleft(6)
+    q.appendleft(7)
+
+    q.pop()
+    q.pop()
+    q.pop()
+
+
+    from collections import deque
+    class Queue:
+        def __init__(self):
+            self.buffer = deque()
+
+    def enqueue(self, val):
+        self.buffer.appendleft(val)
+    
+    def dequeue(self):
+        return self.buffer.pop()
+    
+    def is_empty(self):
+        return len(self.buffer) == 0
+    
+    def size(self):
+        return len(self.buffer)

@@ -1,0 +1,77 @@
+Keywords
+    - Problem LinkedList is trying to solve
+    - Time complexity of Linkedlist
+    - Benefits of Linkedlist over array
+    - Doubly Linked List
+    - Linkedlist vs Arrays Time Complexities
+
+== Problem LinkedList is trying to solve ==
+
+    Problem 1: Inserting item into array at certain index
+        - When trying to insert item into array, at certain index
+        - the rest of the items must be copied and pushed to the next index
+        - if array is large, operation is inefficient
+
+    Problem 2: For Dynamic arrays
+        - Once dynamic array is full and new element inserted
+        - will have to create entirely new memory space
+        - new memory space = old memory space * 2
+        - copy over all elements from old memory to new memory
+
+
+    * Array store data in contiguous memory
+    * Linkedlist store data in random memory, linked by pointers
+
+
+    eg: (Singly LinkedList) (only link to next node, not previous node)
+    0x00500 (own memory location) | value1 | 0x00A1 (next memory location)
+    0x00A1  | value2 | 0x00C5
+    0x00C5 | value3 | 0x00D7
+
+     Solution 1:
+        - If want to add new item, just need to modify the pointer
+        - All other items are unaffected
+
+    Solution 2:
+        - No problem of memory allocation 
+        - random memory used
+
+
+== Time complexity of Linkedlist ==
+    - Insert / Delete element at beginning: O(1)
+    - Insert / Delete element at end: O(n)
+        - need to modify every link
+    - Linked List Traversal: O(n) (same as array)
+    - Accessing element by value: O(n) (same as array)
+
+== Benefits of Linkedlist over array ==
+    - Don't need to pre-allocate space
+    - Insertion is easier
+    
+
+== Doubly Linked List ==
+    - nodes have both previous and next address
+    - can traverse forward & backward links
+
+    eg:
+
+    null (previous address) | 0x00500 (current address) | value1 | 0x00A1 (next address)
+    0x00500 (pre) | 0x00A1 (cur) | value2 | 0x00C5 (next)
+    0x00A1 (pre) | 0x00C5 (cur) | value3 | 0x00D7 (next)
+
+
+== Linkedlist vs Arrays Time Complexities ==
+    Indexing: (if alrdy know index)
+        - Array: O(1)
+        - LinkedList: O(n) (have to traverse to find memory)
+
+    Insert / Delete element at start:
+        - Array: O(n) (have to copy and move all other elements)
+        - LinkedList: O(1)
+
+    Insert / Delete element at end:
+        - Array: O(1)
+        - LinkedList: O(n)
+
+    Insert element in middle:
+        - Array & Linkedlist: O(n)

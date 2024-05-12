@@ -1,0 +1,62 @@
+Keywords:
+    - Binary Trees
+    - What problem Binary tree solve
+    - Time complexity (Binary Search Tree)
+    - Searching Binary Search Trees
+
+
+== Binary Trees ==
+    - Each node in tree have at most 2 children
+        - left child & right child
+
+    - Node without child is known as leaf node
+    - root node is at depth 0 (Level 0)
+    - height = max depth of tree
+    - max nodes possible at level i = 2^i
+        Level 0 = 2^0 = 1 node
+        Level 1 = 2^1 = 2 nodes (2 nodes at level 1)
+        Level 2 = 2^2 = 4 nodes (4 nodes at level 2)
+    
+        Max nodes possible = 2^(h) - 1, h = no. of levels
+
+        height of perfect binary tree = log2(n+1) - 1, n = no. of nodes
+            - *perfect binary tree = all nodes present in tree
+
+
+    - Balanced Binary Tree -
+        - height of left & right subtree differ by not more than 1
+        diff = |hleft - hright|
+        height = no. of edges in longest path from root to leaf
+
+
+    - Strict Binary Tree -
+        - Each node can have 2 or 0 children, nothing in between
+
+    - Complete Binary Tree -
+        - all levels except last level completely filled
+        - last level have nodes as far left as possible
+    
+    - Perfect Binary Tree -
+        - entire tree completely filled with nodes
+
+
+== What problem Binary tree solve ==
+    - Implemented by "Set" data structure (only unique values)
+        - using Binary Search Trees
+
+    - Binary Search Tree -
+        - Binary Tree with certain order
+        - All value on left node is lower than value on right node (at respective level)
+        - nodes are unique
+
+== Time complexity (Binary Search Tree) ==
+    Searching: O(logN)
+    Inserting: O(logN)
+
+
+== Searching Binary Search Trees ==
+    1) Breadt first search
+    2) Depth first search
+        - in order traversal
+        - pre order traversal
+        - post order traversal

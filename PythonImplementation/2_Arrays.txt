@@ -1,0 +1,75 @@
+== Arrays ==
+    - most common & basic data structure
+    - represented with a list in python
+    - stored sequentially in memory
+
+
+    Search by index:
+        stocks = [1,2,3,4,5]
+        stocks[0]
+        stocks[1]
+
+
+    Search by value:
+        for i in range(len(stocks)):
+            if(stocks[i] == 5):
+                return i
+
+
+    Print all values
+        for price in stocks:
+            print(price)
+
+
+    Insert values (python)
+        stocks.insert(idx, value)
+        stocks.append(value) # append to end of list
+
+
+    Delete values (python)
+        stocks.pop(idx)
+        stocks.remove(value)
+    
+
+Static vs Dynamic Arrays
+    - Python list is dynamic by default
+
+    Static:
+        - fixed size
+
+        Java: 
+            int[] stocks = new int[5];
+
+    Dynamic:
+        - variable size (expand or contract depending on data)
+        - once capacity reached, will create new memory location with size = <previous_size * 2>
+            - copy all elements from old location to new location
+
+            Java:
+                ArrayList<Integer> stocks = new ArrayList<Integer>();
+
+
+Python arrays can store different types of data
+Other languages can only store type-specified data
+
+
+
+== Multidimensional Arrays ==
+    - array within array
+
+        stocks = [
+            [1,2,3,4],
+            [5,6,7,8],
+            [9,10,11,12]
+        ]
+
+
+== Language Implementation of Arrays ==
+    Static:
+        Java - native array
+        c++ - native array
+
+    Dynamic:
+
+        Java - ArrayList<dtype>
+        c++ - std::vector

@@ -1,0 +1,46 @@
+Keywords 
+    - Tree Structure
+    - Creating General Tree in Python
+
+== Tree Structure ==
+    - Good for Parent-child r/s
+    - hierarchical form
+    - root, branches, leaf (no more children)
+    - each entity in trees are known as nodes
+        - Root nodes, nodes, leaf nodes (no child)
+
+    - Other terminologies (ancestor | descendents)
+    - Level 0: root, Level 1, Level 2 (can have n levels)
+
+    - Binary Trees -
+        - Each node at max 2 children
+    
+    - Trees are recursive data structures
+        - child node is a Tree node itself
+
+    eg: e-commerce website
+    Electronic Products (Main parent) (root)
+        - Laptops (Layer 1 child)
+            - Apple Macbook (Layer 2 child)
+            - Microsoft Surface (Layer 2 child)
+            - Lenovo Thinkpad (Layer 2 child)
+        - Cellphones (Layer 1 child)
+            - iPhone
+            - Google Pixel
+            - Vivo
+        - Televisions (Layer 1 child)
+            - Samsung
+            - LG
+
+
+== Creating General Tree in Python == 
+
+class TreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.children = [] # each children will be instance of TreeNode
+        self.parent = None
+
+    def add_child(self, child): # child will be instance of TreeNode
+        child.parent = self
+        self.children.append(child)

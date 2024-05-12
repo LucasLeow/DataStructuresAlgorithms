@@ -1,0 +1,79 @@
+Keywords:
+    - Stack use case
+    - Implementation of Stack in different programming language
+    - Python list as stack (not recommended)
+    - Python collections.deque as stack (recommended)
+    
+
+== Stacks ==
+    - first in, last out (FILO) | Last in, First out (LIFO)
+    
+
+    - Methods -
+        - push: insert element at top O(1)
+        - pop: get top-most element  O(1)
+        - search by element: O(n)
+
+== Stack use case ==
+    - function execution sequence (function stack) (thats why have print stack trace)
+        - function1 calling function2 calling function3
+        - compiler pushes function1, then 2 then 3 (3 at top)
+    - Undo functionality (actions pushed into stack, first action at bottom)
+
+== Implementation of Stack in different programming language ==
+    - Python: list, collections.deque, queue.LifoQueue
+    - Java: Stack<dtype>, Deque<dtype>
+    - c++: std::stack<int> stk;
+
+== Python list as stack (not recommended) ==
+    * List is dynamic array 
+    * Internally, will expand capacity as required (inefficient process)
+    web_history = []
+
+    # pushing into "stack"
+    web_history.append("https://www.cnn.com/")
+    web_history.append("https://www.cnn.com/world")
+    web_history.append("https://www.cnn.com/china")
+    web_history.append("https://www.cnn.com/india")
+
+    #popping from "stack"
+    web_history.pop() # pop the topmost value
+    web_history.pop()
+    web_history.pop()
+
+== Python collections.deque as stack (recommended) ==
+    - implemented using doubly linked list (not dynamic array)
+
+    from collections import deque
+    stack = deque()
+
+    print(dir(stack)) # prints out all avail methods for stack
+    stack.append("https://www.cnn.com/")
+    stack.append("https://www.cnn.com/world")
+    stack.append("https://www.cnn.com/china")
+    stack.append("https://www.cnn.com/india")
+
+    stack.pop() # pop the topmost value
+    stack.pop()
+    stack.pop()
+
+== Python Implementation of Stack using deque ==
+
+    class Stack:
+        def __init__(self):
+            self.container = deque()
+
+        def push(self, val):
+            self.container.append(val)
+        
+        def pop(self):
+            return self.container.pop()
+        
+        def peek(self):
+            return self.container[-1]
+        
+        def is_empty(self):
+            return len(self.container) == 0
+        
+        def size(self):
+            return len(self.container)

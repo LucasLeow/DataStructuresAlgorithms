@@ -1,0 +1,79 @@
+Search keywords:
+    - HashTable vs Hashmap
+    - HashTable
+    - Implementation of Python Dictionaries
+    - Hash Functions
+    - Hashtable Time Complexity
+    - Implementation of Hashmap By Programming Language
+    - Collision Handling
+        - Solution 1 (Separate chaining)
+
+
+== HashTable vs Hashmap ==
+    - HashMap allows 1 null key & multiple null values
+    - HashTable does not allow null key or value
+
+== HashTable ==
+    - key value pair
+    - performs search ops in O(1)
+    - Implemented as Python dictionary
+
+== Implementation of Python Dictionaries ==
+    - Python dictionaries built using HashTables
+    - Dictionaries is Python way of implementing Hashtable
+
+    1) A contiguous portion of memory is set aside for Hashtable (list of memory)
+    2) All Keys are assigned an index to memory location via Hash Function
+        Key -> HashFunction -> Memory location index 
+        (Keys may not be stored in order)
+
+
+== Hash Functions ==
+    - multiple ways to implement hash functions
+
+        1 technique: ASCII method
+        m: 109
+        a: 97
+        r: 114
+        c: 99
+        h: 104
+        " ": 32
+         6: 54
+         SUM = 609
+
+         609 % 10 = 9
+         key: march 6
+         index: 9
+         
+         - Implementation in Python -
+        def get_hash(key):
+            hash = 0
+            for char in key:
+                hash += ord(char)
+            return hash % 100
+
+
+== Hashtable Time Complexity ==
+    - Lookup by key: O(1)
+    - Insertion / Deletion: O(1)
+
+== Implementation of Hashmap By Programming Language ==
+    - Python: Dictionary
+    - Java: HashMap | LinkedHashMap
+    - C++: std::map
+
+== Collision Handling ==
+    - Collision: 2 keys mapping to same output value through the hash function
+
+
+    == Solution 1 (Separate chaining) ==
+        - Instead of storing value in memory array, store LinkedList
+
+    eg: 'march 6' & 'march 17' produces idx 9
+    At idx 9:
+        ('march 6', 310), ('march 17', 459)
+    - Multiple keys can share same memory idx
+    - may cause time complexity to be O(n)
+
+    == Solution 2 (Linear Probing) ==
+        - if memory location alrdy used, proceed to next available location
