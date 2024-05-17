@@ -54,6 +54,15 @@ public class LinkedList {
 
     public void prepend(int val) {
         // create new node + add node to front
+        Node newNode = new Node(val);
+        if (this.length == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
     }
     public boolean insert(int idx, int val) {
         // create new node + insert at index
