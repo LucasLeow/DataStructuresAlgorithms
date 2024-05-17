@@ -96,7 +96,23 @@ public class LinkedList {
         return false;
     }
     public boolean insert(int idx, int val) {
-        // create new node + insert at index
+        if (this.get(idx) == null) return false;
+        if (idx == 0) {
+            this.prepend(val);
+            return true;
+        }
+        if (idx == this.length) {
+            this.append(val);
+            return true;
+        }
+
+        Node newNode = new Node(val);
+        Node prev = this.get(idx - 1);
+
+        newNode.next = prev.next;
+        prev.next = newNode;
+        this.length++;
+        return true;
     }
     public void printList() {
         Node cur = head;
