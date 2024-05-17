@@ -86,6 +86,15 @@ public class LinkedList {
         }
         return cur;
     }
+
+    public boolean set(int idx, int val) {
+        Node desired = this.get(idx);
+        if (desired != null) {
+            desired.val = val;
+            return true;
+        }
+        return false;
+    }
     public boolean insert(int idx, int val) {
         // create new node + insert at index
     }
