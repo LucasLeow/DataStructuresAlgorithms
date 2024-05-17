@@ -130,6 +130,22 @@ public class LinkedList {
         this.length--;
         return temp;
     }
+
+    public void reverse() {
+        Node temp = this.head;
+        this.head = this.tail;
+        this.tail = temp;
+
+        Node after = temp.next;
+        Node before = null;
+
+        for (int i = 0; i < this.length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
     public void printList() {
         Node cur = head;
         while(cur != null) {
