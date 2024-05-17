@@ -25,7 +25,7 @@ public class LinkedList {
             this.head = newNode;
             this.tail = newNode;
         } else {
-            this.head.next = newNode;
+            this.tail.next = newNode;
             this.tail = newNode;
         }
         this.length++;
@@ -98,7 +98,7 @@ public class LinkedList {
     }
 
     public boolean insert(int idx, int val) {
-        if (this.get(idx) == null) return false;
+        if (idx < 0 || idx > this.length) return false;
         if (idx == 0) {
             this.prepend(val);
             return true;
@@ -118,7 +118,7 @@ public class LinkedList {
     }
 
     public Node remove(int idx) {
-        if (this.get(idx) == null) return null;
+        if (idx < 0 || idx > length) return null;
         if (idx == 0) return this.removeFirst();
         if (idx == this.length) return this.removeLast();
 
@@ -149,7 +149,7 @@ public class LinkedList {
     public void printList() {
         Node cur = head;
         while(cur != null) {
-            System.out.println(cur.val);
+            System.out.print(cur.val + " -> ");
             cur = cur.next;
         }
     }
@@ -164,5 +164,13 @@ public class LinkedList {
 
     public void getLength() {
         System.out.println("Length: " + this.length);
+    }
+
+    public static void main(String[] args) {
+        LinkedList myLL = new LinkedList(1);
+        myLL.append(2);
+        myLL.append(3);
+        myLL.append(4);
+        myLL.printList();
     }
 }
