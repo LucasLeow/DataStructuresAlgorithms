@@ -77,6 +77,15 @@ public class LinkedList {
         }
         return temp;
     }
+
+    public Node get(int idx) {
+        if (idx < 0 || idx >= this.length) return null;
+        Node cur = this.head;
+        for(int i = 0; i < idx; i++) {
+            cur = cur.next;
+        }
+        return cur;
+    }
     public boolean insert(int idx, int val) {
         // create new node + insert at index
     }
