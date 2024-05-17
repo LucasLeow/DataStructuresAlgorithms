@@ -64,6 +64,19 @@ public class LinkedList {
         }
         this.length++;
     }
+
+    public Node removeFirst() {
+        if (this.head == null) return null;
+        Node temp = this.head;
+        this.head = temp.next;
+        temp.next = null;
+        this.length--;
+
+        if (this.length == 0) {
+            this.tail = null;
+        }
+        return temp;
+    }
     public boolean insert(int idx, int val) {
         // create new node + insert at index
     }
