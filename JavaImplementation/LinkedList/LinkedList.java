@@ -17,6 +17,7 @@ public class LinkedList {
         this.tail = newNode;
         this.length = 1;
     }
+
     public void append(int val) {
         // create new node + add node to end
         Node newNode = new Node(val);
@@ -95,6 +96,7 @@ public class LinkedList {
         }
         return false;
     }
+
     public boolean insert(int idx, int val) {
         if (this.get(idx) == null) return false;
         if (idx == 0) {
@@ -113,6 +115,20 @@ public class LinkedList {
         prev.next = newNode;
         this.length++;
         return true;
+    }
+
+    public Node remove(int idx) {
+        if (this.get(idx) == null) return null;
+        if (idx == 0) return this.removeFirst();
+        if (idx == this.length) return this.removeLast();
+
+        Node prev = this.get(idx - 1);
+        Node temp = prev.next;
+
+        prev.next = prev.next.next;
+        temp.next = null;
+        this.length--;
+        return temp;
     }
     public void printList() {
         Node cur = head;
