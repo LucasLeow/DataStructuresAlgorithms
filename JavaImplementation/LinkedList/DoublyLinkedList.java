@@ -60,18 +60,17 @@ public class DoublyLinkedList {
     }
 
     public Node removeFirst() {
-        if (this.head == null) return null;
+        if (this.length == 0) return null;
         Node temp = this.head;
-        this.head = this.head.next;
-        temp.next = null;
-        this.head.prev = null;
-        this.length--;
-
-        if (this.length == 0) { // only 1 element exist previously
+        if (this.length == 1) {
             this.head = null;
             this.tail = null;
+        } else {
+            this.head = this.head.next;
+            this.head.prev = null;
+            temp.next = null;
         }
-
+        this.length--;
         return temp;
     }
 
