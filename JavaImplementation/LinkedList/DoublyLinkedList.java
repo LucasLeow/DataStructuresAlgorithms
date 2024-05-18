@@ -125,9 +125,9 @@ public class DoublyLinkedList {
     }
 
     public Node remove(int idx) {
-        if (idx < 0 || idx > this.length) return null;
+        if (idx < 0 || idx >= this.length) return null;
         if (idx == 0) return this.removeFirst();
-        if (idx == this.length) return this.removeLast();
+        if (idx == this.length - 1) return this.removeLast();
 
         Node temp = get(idx);
 
