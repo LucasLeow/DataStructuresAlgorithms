@@ -92,6 +92,17 @@ public class DoublyLinkedList {
         return temp;
     }
 
+    public boolean set(int idx, int val) {
+        if (idx < 0 || idx >= this.length) return false;
+
+        Node temp = this.get(idx);
+        if (temp != null) {
+            temp.val = val;
+            return true;
+        }
+        return false;
+    }
+
     public void printList() {
         Node cur = head;
         while (cur != null) {
