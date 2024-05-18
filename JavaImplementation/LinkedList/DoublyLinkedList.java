@@ -103,6 +103,43 @@ public class DoublyLinkedList {
         return false;
     }
 
+    public boolean insert(int idx, int val) {
+        if (idx < 0 || idx > this.length) return false;
+
+        if (idx == 0) {
+            this.prepend(val);
+            return true;
+        }
+        if (idx == this.length) {
+            this.append(val);
+            return true;
+        }
+        Node newNode = new Node(val);
+        Node prev = this.get(idx - 1);
+
+        newNode.next = prev.next;
+        newNode.prev = prev;
+        prev.next = newNode;
+        newNode.next.prev = newNode;
+        this.length++;
+        return true;
+    }
+
+    public Node remove(int idx) {
+        if (idx < 0 || idx > this.length) return null;
+        if (idx == 0) return this.removeFirst();
+        if (idx == this.length) return this.removeLast();
+
+        Node temp = get(idx);
+
+        temp.next.prev = temp.prev;
+        temp.prev.next = temp.next;
+        temp.next = null;
+        temp.prev = null;
+        this.length--;
+        return temp;
+    }
+
     public void printList() {
         Node cur = head;
         while (cur != null) {
