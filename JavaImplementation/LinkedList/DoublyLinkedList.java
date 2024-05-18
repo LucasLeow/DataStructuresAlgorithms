@@ -34,15 +34,15 @@ public class DoublyLinkedList {
     public Node removeLast() {
         if (this.length == 0) return null;
         Node temp = this.tail;
-        this.tail = temp.prev;
-        this.tail.next = null;
-        temp.prev = null;
-        this.length--;
-
-        if (this.length == 0) { // if LL only has single element
+        if (length == 1) {
             this.head = null;
             this.tail = null;
+        } else {
+            this.tail = tail.prev;
+            tail.next = null;
+            temp.prev = null;
         }
+        this.length--;
         return temp;
     }
 
