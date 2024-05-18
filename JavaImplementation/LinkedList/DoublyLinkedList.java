@@ -46,6 +46,19 @@ public class DoublyLinkedList {
         return temp;
     }
 
+    public void prepend(int val) {
+        Node newNode = new Node(val);
+        if (this.length == 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.head.prev = newNode;
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+        this.length++;
+    }
+
     public void printList() {
         Node cur = head;
         while (cur != null) {
