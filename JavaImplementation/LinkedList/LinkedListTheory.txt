@@ -7,6 +7,9 @@ LinkedList
     - uses head & tail pointer variable for start & end nodes
     - nodes are stored in heap memory (randomly)
 
+    * SinglyLinkedList : only has 'next' pointer
+    * DoublyLinkedList : has both 'prev' & 'next' pointer
+
 ============================================================================================
 LinkedList Big O
 ============================================================================================

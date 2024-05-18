@@ -1,4 +1,4 @@
-public class LinkedList {
+public class SinglyLinkedList {
     private Node head;
     private Node tail;
     private int length;
@@ -11,7 +11,7 @@ public class LinkedList {
         }
     }
 
-    public LinkedList(int val) {
+    public SinglyLinkedList(int val) {
         Node newNode = new Node(val);
         this.head = newNode;
         this.tail = newNode;
@@ -146,6 +146,7 @@ public class LinkedList {
             temp = after;
         }
     }
+
     public void printList() {
         Node cur = head;
         while(cur != null) {
@@ -167,7 +168,7 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList myLL = new LinkedList(1);
+        SinglyLinkedList myLL = new SinglyLinkedList(1);
         myLL.append(2);
         myLL.append(3);
         myLL.append(4);
