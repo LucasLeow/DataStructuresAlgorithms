@@ -1,0 +1,14 @@
+========================================================================
+Types of Sorting
+========================================================================
+    1) In-place sorting (most common)
+        - uses constant space (modifies the original array / collection)
+        - Selection | Bubble | Insertion | Heap sort
+
+    2) Stable sorting
+        - order of elements (of two or more equal values) are preserved after sorting
+    
+    3) Unstable sorting
+        - order of elements (of two or more equal values) are not preserved after sorting
+
+

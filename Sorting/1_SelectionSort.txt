@@ -1,0 +1,8 @@
+========================================================================
+Selection Sort
+========================================================================
+    1) start by initializing 2 pointers ptr1 & ptr2 at 0 & 1 idx
+    2) move ptr2 along entire array to search for lowest value
+    3) swap lowest value using the 2 ptrs
+    4) move ptr1 and ptr2 to idx 1 & 2.
+    Repeat step 2 to 4 until entire array sorted
