@@ -1,0 +1,23 @@
+========================================================================
+Bubble Sort
+========================================================================
+    - simplest sorting algorithm
+    - swapping adjacent elements if they in wrong order
+    - not suitable for large data set
+    * largest number bubble to end of array
+
+Steps:
+    1) set up ptr1 & ptr2 to idx 0 and 1
+    2) compare value between 2 pts, swap larger value to the right
+    3) move both ptrs to idx 1 and idx 2 respectively
+    4) repeat until ptr reach end of array
+    5) repeat procedure, remove last idx for every new iteration
+
+Total number of passes : n-1
+
+Time Complexity:
+Best Case: O(n)
+Average case: O(n^2)
+Worst Case: O(n^2)
+
+Space: O(1) (in-place)

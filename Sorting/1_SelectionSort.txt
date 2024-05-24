@@ -5,4 +5,11 @@ Selection Sort
     2) move ptr2 along entire array to search for lowest value
     3) swap lowest value using the 2 ptrs
     4) move ptr1 and ptr2 to idx 1 & 2.
-    Repeat step 2 to 4 until entire array sorted
+    Repeat step 2 to 4 until entire array sorted~
+
+Time Complexity:
+Best: O(n^2)
+Average: O(n^2)
+Worst : O(n^2)
+
+Space: O(1) (in-place)
