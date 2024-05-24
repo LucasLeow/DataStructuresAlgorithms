@@ -1,0 +1,24 @@
+============================================================================================
+LinkedList
+============================================================================================
+    - uses nodes to store data
+        - each node has next & prev pointer to point to next & prev node
+
+    - uses head & tail pointer variable for start & end nodes
+    - nodes are stored in heap memory (randomly)
+
+    * SinglyLinkedList : only has 'next' pointer
+    * DoublyLinkedList : has both 'prev' & 'next' pointer
+
+============================================================================================
+LinkedList Big O
+============================================================================================
+    - insertion / removal @ start / end with tail pointer : O(1) (More efficient than ArrayList)
+
+    - insertion / removal @ idx n : O(n) - need cur pointer from head (Same as ArrayList)
+    - access by idx / value : O(n) (Worst than ArrayList)
+
+============================================================================================
+Node
+============================================================================================
+    - contains the value & pointers

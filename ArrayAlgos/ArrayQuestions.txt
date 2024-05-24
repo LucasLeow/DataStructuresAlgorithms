@@ -1,0 +1,19 @@
+===============================================================================================
+1) Find peak element not smaller than its neighbours
+===============================================================================================
+Given an arr of n elements, that is first strictly increasing and then maybe strictly decreasing, find peak element in array.
+
+eg:
+    input: {10, 20, 15, 2, 23, 90, 67}
+    Output: 20 or 90
+    - 20 has neighbours less than itself, 90 also similar
+
+    Edge case:
+        - if strictly increasing, last element is peak
+        - if strictly decreasing, first element is peak
+        - if all value same, all values are peak
+
+    Pseudo:
+        - if first element > second element, return first element (strictly decreasing case)
+        - if last element > 2nd last element, return last element (strictly increasing)
+        - loop from 2nd idx (1 to N - 1), check i with i-1 & i+1 idx. return if i value larger than both
