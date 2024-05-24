@@ -1,0 +1,14 @@
+============================================================================================
+Queue
+============================================================================================
+    - First in First Out | Last in Last out
+    * Queues can be implemented with ArrayList or LinkedList
+    * enqueue and dequeue are on opposite ends
+
+    Implementation of Queue:
+        - Array / ArrayList
+            - regardless of which operation (enqueue / dequeue), 1 side will be O(1), the other O(n)
+
+        - LinkedList (as queue)
+            - enqueue at the tail O(1)
+            - dequeue at the head O(1)
