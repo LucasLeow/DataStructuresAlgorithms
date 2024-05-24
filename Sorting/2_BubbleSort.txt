@@ -2,9 +2,9 @@
 Bubble Sort
 ========================================================================
     - simplest sorting algorithm
-    - swapping adjacent elements if they in wrong order
+    - swapping adjacent elements if they in wrong order(largest number bubble to end of array)
     - not suitable for large data set
-    * largest number bubble to end of array
+
 
 Steps:
     1) set up ptr1 & ptr2 to idx 0 and 1

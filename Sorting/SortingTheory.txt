@@ -1,0 +1,42 @@
+========================================================================
+Sorting Algorithms
+========================================================================
+    - used to rearrange given array or list of elements
+
+========================================================================
+Types of Sorting
+========================================================================
+    1) In-place sorting (most common)
+        - does not require additional memory to sort (modifies the original collection)
+        - Selection | Bubble | Insertion | Heap sort
+
+    2) Stable sorting
+        - order of elements (of two or more equal values) are preserved after sorting
+    
+    3) Unstable sorting
+        - order of elements (of two or more equal values) are not preserved after sorting
+
+    4) Internal sorting 
+        - data for sorting is stored in the RAM
+    
+    5) External sorting
+        - all data needed to be sorted cannot fit into memory at once
+
+========================================================================
+Use cases for sorting
+========================================================================
+    - Searching algorithms
+        - sorted data easier to perform search
+
+    - Data Management
+        - sorted data makes it easier to search, retrieve & analyse
+    
+    - Database optimization
+        - sorted data improves query performance
+    
+    - Machine Learning
+        - sorting helps prep data for ML models
+    
+    - Data Analysis
+        - sorted data help identify patterns, trends, outliers
+    
