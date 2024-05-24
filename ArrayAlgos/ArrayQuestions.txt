@@ -17,3 +17,15 @@ eg:
         - if first element > second element, return first element (strictly decreasing case)
         - if last element > 2nd last element, return last element (strictly increasing)
         - loop from 2nd idx (1 to N - 1), check i with i-1 & i+1 idx. return if i value larger than both
+
+
+===============================================================================================
+2) Find min / max element of array
+===============================================================================================
+Given an arr, write a function to find the minimum and maximum element in it
+- Assume no negative values
+
+    Pseudo:
+        - if arr.length == 1, min = max = element
+        - init 2 var min = Integer.MAX_VALUE, max = Integer.MIN_VALUE
+        - iterate through array, if arr[i] > max, max = arr[i] & arr[i] < min, min = arr[i]
