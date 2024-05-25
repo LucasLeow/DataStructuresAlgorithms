@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class HashTable {
     private int size = 7; // prime numbers result in fewer collisions
     private Node[] dataMap; // dataMap is an array of pointers to head Nodes (Linked List)
@@ -45,7 +47,33 @@ public class HashTable {
             temp.next = newNode;
             newNode.prev = temp;
         }
+    }
 
+    public int get(String key) {
+        int idx = this.hashFunction(key);
+
+        if (this.dataMap[idx] == null) return 0;
+
+        Node temp =  this.dataMap[idx];
+        while (temp != null) {
+            if (temp.key == key) return temp.value;
+            temp = temp.next;
+        }
+        return 0; // no match for key after iteration
+    }
+
+    public ArrayList getKeys() {
+        ArrayList<String> keys = new ArrayList<>();
+        for (int i = 0; i < this.dataMap.length; i++) {
+            if (this.dataMap[i] != null) {
+                Node temp = this.dataMap[i];
+                while (temp != null) {
+                    keys.add(temp.key);
+                    temp = temp.next;
+                }
+            }
+        }
+        return keys;
     }
 
     public void printTable() {

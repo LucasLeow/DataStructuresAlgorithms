@@ -43,3 +43,20 @@ HashTable vs HashMap
 ================================================================================================
     - HashMap allows 1 null key & multiple null values
     - HashTable does not allow null key or value
+
+
+================================================================================================
+Typical Implementation
+================================================================================================
+    - Array storing LinkedList
+    - Hashfunction with modulo operation to get idx of array
+    - LinkedList to handle collisions via separate chaining
+
+    * Python dictionaries are hashtables
+
+================================================================================================
+Implementation of Hashmap By Programming Language
+================================================================================================
+    - Python: Dictionary
+    - Java: HashMap | LinkedHashMap
+    - C++: std::map
