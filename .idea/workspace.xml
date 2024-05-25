@@ -7,6 +7,9 @@
     <list default="true" id="109a4d4f-4be0-441a-84f7-050fb6c1058c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_Data_Structures/7_Graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/7_Graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Data_Structures/7_Graphs/GraphTheory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/7_Graphs/GraphTheory.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/concepts_DataStruct_Algorithms/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/concepts_DataStruct_Algorithms/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/concepts_DataStruct_Algorithms/GraphTheory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/concepts_DataStruct_Algorithms/GraphTheory.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

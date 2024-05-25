@@ -12,6 +12,17 @@ public class Graph {
         return false; // vertex already exist
     }
 
+    public boolean removeVertex(String vertex) {
+        if (this.adjList.get(vertex) == null) return false;
+
+        this.adjList.remove(vertex);
+
+        for (ArrayList adjLs : this.adjList.values()) {
+            adjLs.remove(vertex);
+        }
+        return true;
+    }
+
     public boolean addEdge(String vertex1, String vertex2) {
         if (this.adjList.get(vertex1) != null && this.adjList.get(vertex2) != null) {
             this.adjList.get(vertex1).add(vertex2);
@@ -38,6 +49,14 @@ public class Graph {
         Graph g = new Graph();
         g.addVertex("A");
         g.addVertex("B");
+        g.addVertex("C");
+
+        g.addEdge("A", "B");
+        g.addEdge("A", "C");
+        g.addEdge("B", "C");
+
+        g.printGraph();
+        g.removeVertex("A");
         g.printGraph();
     }
 }

@@ -19,7 +19,7 @@ Graphs
     - There are no limits to how many edges a vertex can have
 
 ================================================================================================
-Graph Representation (How to present Graph)
+Graph Representation (How to show graph using code)
 ================================================================================================
 
     1) Adjacency Matrix (1 way to represent graph)
@@ -58,6 +58,7 @@ Graph Representation (How to present Graph)
             "D" = ["C", "E"],
             "E" = ["D", "A"]
         }
+
 ================================================================================================
 Space Complexity of Graph Representation
 ================================================================================================
@@ -72,10 +73,10 @@ Space Complexity of Graph Representation
         - only consider vertex & its adjacent vertices
 
 ================================================================================================
-Time Complexity of Graphs
+Time Complexity of Graph Representation
 ================================================================================================
 
-    - Adjacency Matrix
+    - Adjacency Matrix (Not recommended way to show graph)
         - Adding new vertex = O(|V|^2)
             - stored in arrays, adding new edges = need to create new arrays + account non-adjacent vertices)
 
@@ -89,7 +90,7 @@ Time Complexity of Graphs
         - Remove edge = O(1)
             - just update existing weight from 1 to 0
 
-    - Adjacency List (Typically better than Adjacency Matrix)
+    - Adjacency List (Recommended way to show graph)
         - Adding new vertex = O(1)
             - simply adding new key in HashTable
 
