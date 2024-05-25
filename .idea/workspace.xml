@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="109a4d4f-4be0-441a-84f7-050fb6c1058c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/concepts_DataStruct_Algorithms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTableTheory.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_Problem_Solving/3_Problem_Solving.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Data_Structures/PythonImplementation/4_Hashtable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/PythonImplementation/4_Hashtable.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Data_Structures/PythonImplementation/code/4_Hashtable_LinearProbing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Data_Structures/PythonImplementation/code/4_Hashtable_SeparateChaining.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTableTheory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/6_HashTables(Hashmap)/HashTableTheory.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

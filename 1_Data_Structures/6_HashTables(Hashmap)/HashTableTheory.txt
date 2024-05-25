@@ -5,6 +5,8 @@ HashTables
         - Key is passed into hash function to generate memory address
         - Value is stored in generated memory address
 
+    - perform search operations in O(1) instead of O(n) for most data structures
+
     - Hash functions are one-way
         - cannot reverse engineer memory address to get "key" value
 
