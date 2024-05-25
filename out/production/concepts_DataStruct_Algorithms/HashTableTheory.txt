@@ -1,0 +1,76 @@
+================================================================================================
+HashTables
+================================================================================================
+    - Key-value pair data structure
+        - Key is passed into hash function to generate memory address
+        - Value is stored in generated memory address
+
+    - perform search operations in O(1) instead of O(n) for most data structures
+
+    - Hash functions are one-way
+        - cannot reverse engineer memory address to get "key" value
+
+    - Hash functions are deterministic
+        - always same outcome with the same key
+
+    - Arrays are typically used to store information of the data
+        - keys -> hash function -> idx of array
+
+    - LinkedList can be used within each Array idx to solve problem of collision (Separate chaining)
+
+    * Fewer collisions if address space have prime number of addresses
+        - eg: 7, 13, 17 etc. number of address to store values
+
+
+================================================================================================
+Collision handling
+================================================================================================
+    - 2 keys mapping to same output value through the hash function
+
+================================================================================================
+Solution to Collision
+================================================================================================
+    1) Separate chaining
+        - Instead of storing value inside array, store a linkedlist
+        - whenever collision occurs, new node can be created to extend the linkedlist in that array idx
+        - causes time complexity to be from O(1) to O(n) for very large linkedlist
+
+    2) Linear probing
+        - if memory location alrdy used, proceed to next available location
+
+================================================================================================
+HashTable vs HashMap
+================================================================================================
+    - HashMap allows 1 null key & multiple null values
+    - HashTable does not allow null key or value
+
+
+================================================================================================
+Typical Implementation
+================================================================================================
+    - Array storing LinkedList
+    - Hashfunction with modulo operation to get idx of array
+    - LinkedList to handle collisions via separate chaining
+
+    * Python dictionaries are hashtables
+
+================================================================================================
+Implementation of Hashmap By Programming Language
+================================================================================================
+    - Python: Dictionary
+    - Java: HashMap | LinkedHashMap
+    - C++: std::map
+
+================================================================================================
+HashTable Time Complexity
+================================================================================================
+    - hash function complexity : O(1)
+
+    1) Accessing (get) item
+        - O(1) for direct access
+        - O(1) for separate chaining also, assuming hash function very efficient
+
+    2) Insert (set) item
+        - O(1) for direct set
+        - O(1) for separate chaining also, assuming hash function very efficient
+

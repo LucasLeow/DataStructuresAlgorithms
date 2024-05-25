@@ -21,7 +21,23 @@ public class Graph {
         return false;
     }
 
+    public boolean removeEdge(String vertex1, String vertex2) {
+        if (this.adjList.get(vertex1) != null && this.adjList.get(vertex2) != null) {
+            this.adjList.get(vertex1).remove(vertex2);
+            this.adjList.get(vertex2).remove(vertex1);
+            return true;
+        }
+        return false;
+    }
+
     public void printGraph() {
         System.out.println(this.adjList);
+    }
+
+    public static void main(String[] args) {
+        Graph g = new Graph();
+        g.addVertex("A");
+        g.addVertex("B");
+        g.printGraph();
     }
 }
