@@ -60,3 +60,33 @@ Implementation of Hashmap By Programming Language
     - Python: Dictionary
     - Java: HashMap | LinkedHashMap
     - C++: std::map
+
+================================================================================================
+HashTable Time Complexity
+================================================================================================
+    - hash function complexity : O(1)
+
+    1) Accessing (get) item
+        - O(1) for direct access
+        - O(1) for separate chaining also, assuming hash function very efficient
+
+    2) Insert (set) item
+        - O(1) for direct set
+        - O(1) for separate chaining also, assuming hash function very efficient
+
+================================================================================================
+Common HashTable Interview Question
+================================================================================================
+    - Given 2 or more arrays, determine if the arrays contain common value across
+
+    Inefficient solution: O(n^2)
+        - using nested loops to iterate through 2 or more arrays to compare values
+        1) init for loop for array 1
+        2) init 2nd loop for array 2 to compare value
+        (if values match, return true)
+
+    Efficient solution: O(n)
+        - using hashtable
+        1) loop through array 1, adding value as keys & setting value as true;
+        2) loop through array 2 & perform search (get) operation in hashmap
+            - return if (hm.get(j) != null) return hm.get(j);

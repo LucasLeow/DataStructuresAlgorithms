@@ -8,7 +8,6 @@ public class HashTable {
         private String key;
         private int value;
         private Node next;
-        private Node prev;
 
         public Node(String k, int v) {
             this.key = k;
@@ -45,7 +44,6 @@ public class HashTable {
                 temp = temp.next;
             }
             temp.next = newNode;
-            newNode.prev = temp;
         }
     }
 
