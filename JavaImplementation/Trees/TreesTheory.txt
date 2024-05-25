@@ -1,1 +1,49 @@
-ECHO is on.
+============================================================================================
+Binary Trees
+============================================================================================
+    - Also uses node to store data
+    - instead of "next" pointer, has "left" & "right" pointer
+    - Binary Tree  means only have left & right pointer
+
+    - Normal trees can have unlimited number of pointers pointer to other nodes
+    - Trees are hierarchical data structures
+    - each child node can only have single parent
+
+============================================================================================
+Tree Terminologies
+============================================================================================
+    - Full Binary Tree
+        - Every node either points to 2 other nodes or point to no nodes at all (leaf node)
+
+    - Complete Binary Tree
+        - all levels except (possibly) last are filled, with nodes as left as possible
+
+    - Perfect Binary Tree
+        - Every node at every level of the tree is completely filled across
+
+    - Leaf Node
+        - node that does not have any children
+
+    - parent | child | sibling nodes
+
+============================================================================================
+Binary Search Trees
+============================================================================================
+    - A binary tree where left child node is smaller, right child node is greater than the parent
+
+    * taking any node as reference
+        - all nodes branching leftwards will be smaller
+        - all nodes branching rightwards will be greater
+
+============================================================================================
+Binary Search Trees Big O
+============================================================================================
+    - Each level consist of 2^n - 1 nodes (n = depth)
+    - insertion & deletion = O(log n) (Best case for Perfect BST)
+        - compare value (divide n conquer algorithm)
+            - if lower, go left branch
+            - if higher, go right branch
+
+    * worst case = BST that always have nodee values higher the previous
+        - then BST becomes a linkedlist (only have right branches)
+        - insertion & deletion is O(n)
