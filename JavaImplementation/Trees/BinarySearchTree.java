@@ -1,5 +1,6 @@
 public class BinarySearchTree {
-    private Node root; // need root pointer to point to first Node, else garbage collected
+    Node root; // need root pointer to point to first Node, else garbage collected
+    // cannot be private, else cannot be used by other class
     class Node {
         int value;
         Node left;
@@ -38,4 +39,21 @@ public class BinarySearchTree {
         }
         return false;
     }
-}
+
+    public boolean contains(int value) {
+        if (this.root == null) return false;
+
+        Node temp = this.root;
+
+        while(temp != null) {
+            if (temp.value == value) return true;
+
+            if (value < temp.value) {
+                temp = temp.left;
+            } else {
+                temp = temp.right;
+            }
+        }
+        return false;
+    }
+ }
