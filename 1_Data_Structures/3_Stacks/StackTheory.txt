@@ -1,0 +1,43 @@
+============================================================================================
+Stacks
+============================================================================================
+    - First in Last out, Last in First out
+    - Stack can be seen like providing a set of rules as to how data can be added / removed from an underlying data structure
+
+    * Stacks can be implemented with either Array or LinkedList or any other data structure
+    * Append & pop on the same end
+
+    Usage:
+        - browsing history (back button)
+        - Stack Trace
+        - Undo functionality (pushed into stack)
+
+============================================================================================
+Stack operations
+============================================================================================
+        - push: insert element at top O(1)
+        - pop: get top-most element  O(1)
+        - search by element: O(n)
+        - modify / update value: O(n) - traverse stack to search & modify
+        
+============================================================================================
+    Typical Implementation in Java
+============================================================================================
+        - Array / ArrayList (dynamic array in Java) (must append / pop from end)
+            - append / pop data from the end of the ArrayList to make it O(1)
+            - if append / pop from start of array, becomes O(n) due to re-indexing required
+
+        - Linked List (as stack) (must append / pop from front)
+            - append / pop data from the front (head) of LinkedList to make it O(1)
+            - if append / pop from end, appending is O(1), removing is O(n)
+
+        - stacks are typically represented vertically
+        - LinkedList can also be used to implement stack
+
+
+============================================================================================
+Implementation of Stack in different programming language
+============================================================================================ 
+    - Python: list, collections.deque
+    - Java: Stack<dtype>, Deque<dtype>
+    - c++: std::stack<int> stk;

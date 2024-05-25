@@ -1,0 +1,56 @@
+============================================================================================
+LinkedList
+============================================================================================
+    - uses nodes to store data
+        - each node has next & prev pointer to point to next & prev node
+
+    - uses head & tail pointer variable for start & end nodes
+    - nodes are stored in heap memory (randomly)
+
+    * SinglyLinkedList : only has 'next' pointer
+    * DoublyLinkedList : has both 'prev' & 'next' pointer
+
+    * Array store data in contiguous memory
+    * Linkedlist store data in random memory, linked by pointers
+
+============================================================================================
+Array Problem LinkedList trying to solve
+============================================================================================
+
+    Problem 1: Inserting item into array at certain index
+    
+            - When trying to insert item into array, at certain index
+            - the rest of the items must be copied and pushed to the next index
+            - if array is large, operation is inefficient
+
+    Solution 1:
+            - If want to add new item, just need to modify the pointer
+            - All other items are unaffected
+
+    ------------------------------------------------------------------------------------------------------------------
+
+    Problem 2: For Dynamic arrays
+        - Once dynamic array is full and new element inserted
+        - will have to create entirely new memory space
+        - new memory space = old memory space * 2
+        - copy over all elements from old memory to new memory
+
+    Solution 2:
+        - No problem of memory allocation 
+        - random memory used
+            
+============================================================================================
+LinkedList Time Complexity
+============================================================================================
+    1) Accessing element by idx (Worse than arrays)
+        - O(n), need to traverse using loops
+
+    2) Insert / Delete at beginning
+        - O(1) with head pointer
+    
+    3) Insert / Delete at end
+        - O(1) with tail pointer
+        - O(n) without tail pointer
+    
+    4) Searching for element
+        - O(n) for worst case, element at end of linkedlist

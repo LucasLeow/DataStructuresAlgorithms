@@ -1,0 +1,30 @@
+============================================================================================
+General Trees
+============================================================================================
+    - Also uses node to store data
+    - Normal trees can have unlimited number of pointers pointing to other nodes
+    - instead of "next" pointer, has "left" & "right", "center" etc... pointer
+
+    - Trees are hierarchical data structures
+    - each child node can only have single parent
+
+    - Trees are considered recursive data structure
+============================================================================================
+Tree Terminologies
+============================================================================================
+    - Binary Tree
+        - each node at max 2 children (left & right)
+
+    - Full Binary Tree
+        - Every node either points to 2 other nodes or point to no nodes at all (leaf node)
+
+    - Complete Binary Tree
+        - all levels except (possibly) last are filled, with nodes as left as possible
+
+    - Perfect Binary Tree
+        - Every node at every level of the tree is completely filled across
+
+    - Leaf Node
+        - node that does not have any children
+
+    - parent | child | sibling nodes

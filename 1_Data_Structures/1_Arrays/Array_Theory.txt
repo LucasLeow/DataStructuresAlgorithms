@@ -1,0 +1,85 @@
+========================================================================================================================
+Arrays 
+========================================================================================================================
+
+        - most common & basic data structure
+        - stored sequentially in memory (contiguous block of memory location, one after another)
+        - memory required for entire array allocated as a single block
+        - constant-time access for data stored in arrays
+        - program requires memory pointer to first element of array, typically stored in a variable
+
+========================================================================================================================
+Static vs Dynamic Arrays
+========================================================================================================================
+
+    Static:
+        - size / length determined when array is created / allocated
+        - also known as fixed-length arrays
+        - memory allocated at compile time
+        - size cannot be altered / updated
+
+    Dynamic:
+        - variable size (expand or contract depending on data)
+        - memory allocated at run-time
+        - once capacity reached, will create new memory location with size = <previous_size * 2>
+            - copy all elements from old location to new location
+        
+
+========================================================================================================================
+Multidimensional Arrays 
+========================================================================================================================
+    - array within array (nested arrays)
+
+        2D:
+            [
+                [1,2,3,4],
+                [5,6,7,8],
+                [9,10,11,12]
+            ]
+        
+        3D:
+        [
+            [
+                [1,2,3],
+                [4,5,6]
+            ],
+            [
+                [7,8,9],
+                [10,11,12]
+            ]
+        ]
+    
+========================================================================================================================
+Time Complexities of Array
+========================================================================================================================
+    1) Accessing element by index
+        - O(1), element directly accessed by index
+    
+    2) Inserting at end
+        - O(1) for static & dynamic (no re-sizing)
+        - O(n) for dynamic (re-sizing required)
+
+    3) Inserting at front / elsewhere
+        - O(n) for both static & dynamic (need to shift all elements downwards)
+    
+    4) Searching for element
+        - O(n) for worst case, element is at end of array
+        - O(1) for best case, element at front of array
+    
+    5) Deleting element
+        - O(n) for worst case, deleting from front
+        - need to shift all elements up
+        - O(1) for best case, deleting from end
+
+========================================================================================================================
+Language Implementation of Arrays 
+========================================================================================================================
+    Static:
+        python - list
+        Java - native array
+        c++ - native array
+
+    Dynamic:
+        python - list
+        Java - ArrayList<dtype>
+        c++ - std::vector
