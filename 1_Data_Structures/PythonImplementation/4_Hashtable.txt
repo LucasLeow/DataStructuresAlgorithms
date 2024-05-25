@@ -9,9 +9,6 @@ Search keywords:
         - Solution 1 (Separate chaining)
 
 
-== HashTable vs Hashmap ==
-    - HashMap allows 1 null key & multiple null values
-    - HashTable does not allow null key or value
 
 == HashTable ==
     - key value pair
@@ -61,19 +58,3 @@ Search keywords:
     - Python: Dictionary
     - Java: HashMap | LinkedHashMap
     - C++: std::map
-
-== Collision Handling ==
-    - Collision: 2 keys mapping to same output value through the hash function
-
-
-    == Solution 1 (Separate chaining) ==
-        - Instead of storing value in memory array, store LinkedList
-
-    eg: 'march 6' & 'march 17' produces idx 9
-    At idx 9:
-        ('march 6', 310), ('march 17', 459)
-    - Multiple keys can share same memory idx
-    - may cause time complexity to be O(n)
-
-    == Solution 2 (Linear Probing) ==
-        - if memory location alrdy used, proceed to next available location
