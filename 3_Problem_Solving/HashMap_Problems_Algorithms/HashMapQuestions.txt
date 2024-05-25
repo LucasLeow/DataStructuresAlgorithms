@@ -1,0 +1,21 @@
+===============================================================================================
+1) Items in Common
+===============================================================================================
+    - Given 2 or more arrays, determine if the arrays contain common value across
+
+    Inefficient solution: O(n^2)
+        - using nested loops to iterate through 2 or more arrays to compare values
+        1) init for loop for array 1
+        2) init 2nd loop for array 2 to compare value
+        (if values match, return true)
+
+    Efficient solution: O(n)
+        - using hashtable
+        1) loop through array 1, adding value as keys & setting value as true;
+        2) loop through array 2 & perform search (get) operation in hashmap
+            - return if (hm.get(j) != null) return hm.get(j);
+
+Write a function itemInCommon(array1, array2) that takes two arrays as input
+returns true if there is at least one common item between the two lists, false otherwise.
+
+Use a HashMap to solve the problem that creates an O(n) time complexity.
