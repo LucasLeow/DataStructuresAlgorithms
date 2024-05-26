@@ -46,13 +46,11 @@ HashTable vs HashMap
 
 
 ================================================================================================
-Typical Implementation
+Typical Implementation in Java
 ================================================================================================
     - Array storing LinkedList
-    - Hashfunction with modulo operation to get idx of array
+    - Hash function with (modulo of size of array) to get result idx within range of array size
     - LinkedList to handle collisions via separate chaining
-
-    * Python dictionaries are hashtables
 
 ================================================================================================
 Implementation of Hashmap By Programming Language
