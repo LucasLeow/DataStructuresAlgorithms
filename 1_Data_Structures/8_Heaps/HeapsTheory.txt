@@ -31,9 +31,6 @@ Heap Implementation (In Java)
         - rightChild = 2 * parentIdx + 2
         - parentIdx = int (childIdx - 1) / 2
 
-
-
-
 ================================================================================================
 Heap Insertion
 ================================================================================================
@@ -45,3 +42,20 @@ Heap Insertion
         - if not, end OR if at top of tree, then end
 
     3) repeat step 2 until condition satisfied
+
+================================================================================================
+Heap Removal
+================================================================================================
+
+    1) always remove & return only the root node (top item)
+    2) rearrange node to become a valid heap (Complete tree) in 1 step
+        - i.e move bottom right most node to top of heap
+    3) perform comparison between nodes then swap as required
+        - parent compare to children nodes
+            - highest value of child to be swapped (for max heap)
+            - lowest value of child to be swapped (for min heap)
+
+    Possible heap cases:
+        1) Empty heap
+        2) Only 1 item in heap
+        3) Normal heap (>= 2 nodes)

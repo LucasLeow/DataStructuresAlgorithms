@@ -27,6 +27,32 @@ public class Heap {
         this.heap.set(idx2, temp);
     }
 
+    private void sinkDown(int idx) {
+        int maxIdx = idx;
+        while (true) {
+            int leftChildIdx = this.getLeftChildIdx(maxIdx);
+            int rightChildIdx = this.getRightChildIdx(maxIdx);
+
+            // guard clause to ensure left branch of heap exist
+            if (leftChildIdx < this.heap.size() && this.heap.get(leftChildIdx) > this.heap.get(maxIdx)) {
+                maxIdx = leftChildIdx;
+            }
+
+            // guard clause to ensure right branch of heap exist
+            // maxIdx pointer to leftChildIdx, so check if Right larger than Left
+            if (rightChildIdx < this.heap.size() && this.heap.get(rightChildIdx) > this.heap.get(maxIdx)) {
+                maxIdx = rightChildIdx;
+            }
+
+            if (maxIdx != idx) {
+                this.swap(idx, maxIdx);
+                idx = maxIdx;
+            } else {
+                return; // maxIdx == idx, i.e heap valid
+            }
+        }
+    }
+
     public void insert(int value) {
         this.heap.add(value);
         int curIdx = this.heap.size() - 1;
@@ -35,6 +61,24 @@ public class Heap {
             this.swap(curIdx, this.getParentIdx(curIdx));
             curIdx = this.getParentIdx((curIdx));
         }
+    }
+
+    public Integer remove() {
+        if (this.heap.size() == 0) return null;
+
+        if (this.heap.size() == 1) {
+            return this.heap.remove(0);
+        }
+
+        // Swap root node & cornermost node
+        this.swap(0, this.heap.size() - 1);
+
+        // Remove last node from heap
+        int maxValue = this.heap.remove(this.heap.size() - 1);
+
+        // Sink node if needed
+        this.sinkDown(0);
+        return maxValue;
     }
 
     public List<Integer> getHeap() { // return copy of existing heap
