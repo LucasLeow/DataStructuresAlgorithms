@@ -20,11 +20,19 @@ Heap Implementation (In Java)
     1) can use Tree structure template (See 5_Trees)
 
     2) can use ArrayList to represent heap (aka list in python)
-        * sometimes, idx 0 left empty
+
+        * For start idx = 1 (sometimes idx 0 left empty)
         - leftChild = 2 * parentIndex
         - rightChild = 2 * parentIndex + 1
-
         - parentIdx = int (childIdx / 2) // must be integer division to drop truncate decimal
+
+        * For start idx = 0
+        - leftChild = 2 * parentIdx + 1
+        - rightChild = 2 * parentIdx + 2
+        - parentIdx = int (childIdx - 1) / 2
+
+
+
 
 ================================================================================================
 Heap Insertion
