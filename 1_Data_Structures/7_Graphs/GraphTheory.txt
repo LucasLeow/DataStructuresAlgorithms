@@ -13,8 +13,8 @@ Graphs
         - edges can be weighted or unweighted (cost)
 
         - directionality:
-            - if edge no arrows, bidirectionality assumed (can traverse both ways)
-            - if arrowhead present, can only travel in given direction
+            - if edge no arrows, bi-directionality assumed (can traverse both ways)
+            - if arrow-head present, can only travel in given direction
 
     - There are no limits to how many edges a vertex can have
 
