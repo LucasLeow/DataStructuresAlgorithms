@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/1_Data_Structures/6_HashTables_Hashmap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/1_Data_Structures/7_Graphs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/1_Data_Structures/8_Heaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2_Algorithms/Recursion/code" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

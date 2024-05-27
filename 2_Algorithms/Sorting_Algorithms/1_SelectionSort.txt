@@ -1,6 +1,6 @@
-========================================================================
+=========================================================================================================
 Selection Sort
-========================================================================
+=========================================================================================================
     - algorithm traverse entire array and look for smallest or largest element in the unsorted portion
     - it performs a swap with the first element of the unsorted part
     - process is repeated until entire process is sorted

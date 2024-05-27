@@ -9,8 +9,24 @@ Recursion
             - base case must always return
 
         - recursive case
-    
-    - each time recursion is called, the problem becomes smaller
+            - should also return something to propagate result back the call stack
+
+    eg:
+        def factorial(n):
+            if n == 1:
+                return 1
+            return n * factorial(n-1)
+
+    * Guideline : Always draw the recursion stack to see how results will play out
+    (recursive stack is inverse of callstack)
+     eg:
+    Recursive stack for factorial(4):
+
+     factorial(4)
+     return 4 * factorial(3)
+     return 3 * factorial(2)
+     return 2 * factorial(1)
+     return 1 (base case)
 
 =========================================================================================================
 Call Stack (Whenever using recursion, good to draw CallStack to visualize how results will be generated)
@@ -26,8 +42,6 @@ Call Stack (Whenever using recursion, good to draw CallStack to visualize how re
 
     4) methods / functions are popped from the call stack to be executed
         - results from top of call stack will always be shown first
-    
-
 
     eg:
 
