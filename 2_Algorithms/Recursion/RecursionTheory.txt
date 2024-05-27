@@ -1,0 +1,69 @@
+=========================================================================================================
+Recursion
+=========================================================================================================
+    
+    - a method that calls itself until it doesn't
+        - base case 
+            * without base case, causes stack overflow (program uses more memory than available in the call stack)
+            - base case condition have to be valid
+            - base case must always return
+
+        - recursive case
+    
+    - each time recursion is called, the problem becomes smaller
+
+=========================================================================================================
+Call Stack (Whenever using recursion, good to draw CallStack to visualize how results will be generated)
+=========================================================================================================
+    
+    - Program subroutines (function calls) are added into Stack (known as Call Stack)
+        * each time recursive function is called, append it to CallStack
+        * Once at base case, then slowly pop from callstack to see how results will play out
+
+    1) When a method / function is called, it gets added to the Call stack
+    2) Any other methods called within the 1st function gets appended to the call stack
+    3) Step 2 is repeated until no further method calls are found within function calls
+
+    4) methods / functions are popped from the call stack to be executed
+        - results from top of call stack will always be shown first
+    
+
+
+    eg:
+
+    public class Main {
+
+        public static void methodThree() {
+            System.out.println("Three");
+        }
+
+        public static void methodTwo() {
+            methodThree();
+            System.out.println("Two");
+        }
+
+        public static void methodOne() {
+            methodTwo()
+            System.out.println("One");
+        }
+
+        public static void main(String[] args) {
+            methodOne();
+        }
+    }
+
+
+    Output Result:
+        "Three"
+        "Two"
+        "One"
+
+    * even though methodOne called first (appended to bottom of stack)
+        - therefore, its result is shown last
+
+            Call Stack
+            |            |
+            |Method Three|
+            |Method Two  |
+            |Method One  |
+            ______________

@@ -59,3 +59,24 @@ Heap Removal
         1) Empty heap
         2) Only 1 item in heap
         3) Normal heap (>= 2 nodes)
+
+================================================================================================
+Priority Queues
+================================================================================================
+    * Want to return highest priority item from queue
+    - typically implement using Heap (Tree is always balanced)
+        - Time Complexity : O(1) to get item
+            - O(log n) to insert / remove item
+
+
+    - Can also implement using LinkedList or ArrayList
+        - Time Complexity : O(n) - need to iterate to search for highest priority item
+
+    - HashMap
+        - Time Complexity : O(n) - need to iterate to search for highest priority item
+
+    - Balanced BST
+        - Time Complexity : O(log n) - traverse to bottom right corner is O(log n)
+
+    - Unbalanced BST
+        - Time Complexity : O(n) - behaves like LinkedList
