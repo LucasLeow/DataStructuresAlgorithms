@@ -83,3 +83,41 @@ Print all subset in an array
     - Number of subsets = 2^n (for size n array)
         - including the empty subset {}
 
+===============================================================================================
+Widest width between 2 points (with no points in-between)
+===============================================================================================
+
+Given n points on a 2D plane where points[i] = [xi, yi], 
+Return the widest vertical width between two points such that no points between the 2 other points.
+
+* Plot points on graph to visualize
+
+Input: points = [[8,7],[9,9],[7,4],[9,7]]
+Output: 1 (widest width with no point in between is between 7 to 8 & 8 to 9)
+
+Input: points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]
+Output: 3 (widest width with no points in between is 5 to 8 which is 3)
+
+Hint:
+    - y-axis values are unrequired.
+    - write logic to retrieve x-axis values into arr then sort values
+    - create max_width variable & compare between adjacent elements of sorted x-axis array
+    - account for array index out of bound exception in guard clause
+
+    public int maxWidth(int[][] points) {
+        int[] x_coords = new int[points.length];
+        int max_width = 0;
+
+        for (int i = 0; i < points.length; i++) {
+            x_coords[i] = points[i][0];
+        }
+
+        Arrays.sort(x_coords);
+
+        for (int i = 0; i < x_coords.length; i++) {
+            if (i+1 < x_coords.length && x_coords[i+1] - x_coords[i] >= max_width) {
+                max_width = x_coords[i+1] - x_coords[i]
+            }
+        }
+        return max_width;
+    }
