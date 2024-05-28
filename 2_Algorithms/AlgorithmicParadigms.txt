@@ -5,6 +5,25 @@ Algorithmic Paradigms
     - generic method / pattern for solving a class of problems
     - strategy / approach that guides design of algorithm
     - paradigms don't offer a solution but offer a framework for understanding & tackling problems
+
+    General:
+        1) Backtracking
+        2) Branch and Bound
+        3) Brute-force search
+        4) Divide & Conquer
+        5) Dynamic Programming
+        6) Greedy algorithm
+        7) Recursion
+        8) Prune & search
+    
+    Parametrized Complexity
+        1) Kernalization
+        2) Iterative Compression
+    
+    Computational Geometry
+        1) Sweep line algorithms
+        2) Rotating Calipers
+        3) Randomized Incremental Construction
     
 ===============================================================================================
 1) Divide & Conquer
