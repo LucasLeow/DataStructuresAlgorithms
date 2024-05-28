@@ -1,0 +1,76 @@
+===============================================================================================
+Algorithmic Paradigms
+===============================================================================================
+
+    - generic method / pattern for solving a class of problems
+    - strategy / approach that guides design of algorithm
+    - paradigms don't offer a solution but offer a framework for understanding & tackling problems
+    
+===============================================================================================
+1) Divide & Conquer
+===============================================================================================
+
+    Concept Overview:
+        - dividing problem into smaller problems of similar type
+        - solve them independently
+        - combine solution to solve original problem
+
+    Applications:
+        - merge / quick sort
+        - binary search
+        - fast fourier transform
+
+    Challenges:
+        - requires a clear way to divide the problem & combine solutions
+        - may not be so straightforward to devise for some problems
+    
+===============================================================================================
+2) Dynamic Programming
+===============================================================================================
+    
+    Concept Overview:
+        - Breaking problem down into overlapping sub-problems
+        - solve each sub problem just once & storing solutions 
+            - (usually in a table to prevent computation of same sub problem)
+
+    Application:
+        - Knapsack problem
+        - shortest path problem in graphs (Floyd-Warshall's algorithm)
+        - computing nth Fibonacci Number
+    
+    Challenges:
+        - Determining State and formulating state transition can be difficult
+
+===============================================================================================
+3) Greedy Algorithms
+===============================================================================================
+
+    Concept Overview:  
+        - greedy algorithm makes locally optimal choice at every step
+        - goal is to achieve global optimum
+
+    Application:
+        - Huffman Coding (data compression)
+        - Prim's and Kruskal's algorithm (finding minimum spanning trees)
+        - Dijkstra's algorithm (shortest path in graphs)
+
+    Challenges:
+        - don't always produce optimal solution for all problems
+        - proving correctness can be tricky
+    
+===============================================================================================
+4) Backtracking
+===============================================================================================
+
+    Concept Overview:
+        - Solving problems recursively, building a solution incrementally
+        - removing solutions that fail to satisfy constraints of problems
+
+    Applications:
+        - N-queens problem
+        - Sudoku solver
+        - permutation problems (typically in arrays)
+    
+    Challenges:
+        - can be slow
+        - explores all potential scenarios in worst-case scenario
