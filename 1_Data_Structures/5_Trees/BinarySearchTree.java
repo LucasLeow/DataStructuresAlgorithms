@@ -92,10 +92,35 @@ public class BinarySearchTree {
     }
 
     private Node deleteNode(Node currentNode, int value) {
+        if (currentNode == null) return null; // value not in tree
 
+        if (value < currentNode.value) {
+            currentNode.left = deleteNode(currentNode.left, value); // traverse left of tree
+        } else if (value > currentNode.value) {
+            currentNode.right = deleteNode(currentNode.right, value); // traverse right of tree
+        } else { // value found that is supposed to be deleted (4 conditions)
+            // 4 conditions: leaf node | left subtree exist | right subtree exist | both subtree exists
+
+            // leaf node instance
+            if (currentNode.left == null && currentNode.right == null) {
+                return null;
+            }
+
+            // right subtree exist only
+            if (currentNode.left == null) {
+                currentNode = currentNode.right; // replace currentNode with currentNode.right;
+                return currentNode; // return replaced node back to currentNode.left in recursive call
+            }
+
+            if (currentNode.right == null) {
+                currentNode = currentNode.left;
+                return currentNode;
+            }
+        }
+        return currentNode;
     }
     
     public void deleteNode(int value) { // method overloading
-        deleteNode(value);
+        deleteNode(this.root, value);
     }
  }
