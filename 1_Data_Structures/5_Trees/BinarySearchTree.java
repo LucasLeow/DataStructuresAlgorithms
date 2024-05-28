@@ -60,7 +60,7 @@ public class BinarySearchTree {
     // actual contains method using recursion (not exposed as API)
     private boolean rContains(Node currentNode, int value) {
 
-        if (currentNode == null) return false; // tree is initially empty or value does not exist in BST
+        if (currentNode == null) return false; // tree initially empty or value does not exist in BST
         if (currentNode.value == value) return true; // base case
 
         if (value < currentNode.value) { // value lower than root, traverse left sub-tree
@@ -73,5 +73,29 @@ public class BinarySearchTree {
     // recursive contains method exposed as API for others to use (method overload)
     public boolean rContains(int value) {
         return rContains(this.root, value);
+    }
+
+    private Node rInsert(Node currentNode, int value) {
+        if (currentNode == null) return new Node(value); // base case, once reached left-most null, return a new Node
+
+        if (value < currentNode.value) {
+            currentNode.left = rInsert(currentNode.left, value);
+        } else if (value > currentNode.value){ // have to put this condition to account for duplicate value
+            currentNode.right = rInsert(currentNode.right, value);
+        }
+        return currentNode; // return node before new node or if duplicate value exist, then return currentNode
+    }
+
+    public void rInsert(int value) {
+        if (this.root == null) this.root = new Node(value);
+        rInsert(this.root, value);
+    }
+
+    private Node deleteNode(Node currentNode, int value) {
+
+    }
+    
+    public void deleteNode(int value) { // method overloading
+        deleteNode(value);
     }
  }
