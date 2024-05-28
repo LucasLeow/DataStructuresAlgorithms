@@ -91,13 +91,22 @@ public class BinarySearchTree {
         rInsert(this.root, value);
     }
 
+    public int minValue(Node currentNode) { // can pass any node to find min value for any subtree
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
+
     private Node deleteNode(Node currentNode, int value) {
         if (currentNode == null) return null; // value not in tree
 
+        // traverse tree
         if (value < currentNode.value) {
             currentNode.left = deleteNode(currentNode.left, value); // traverse left of tree
         } else if (value > currentNode.value) {
             currentNode.right = deleteNode(currentNode.right, value); // traverse right of tree
+
         } else { // value found that is supposed to be deleted (4 conditions)
             // 4 conditions: leaf node | left subtree exist | right subtree exist | both subtree exists
 
@@ -111,13 +120,19 @@ public class BinarySearchTree {
                 currentNode = currentNode.right; // replace currentNode with currentNode.right;
                 return currentNode; // return replaced node back to currentNode.left in recursive call
             }
-
+            
+            // left subtree exist only
             if (currentNode.right == null) {
                 currentNode = currentNode.left;
                 return currentNode;
             }
+
+            // left & right subtree exists
+            int subTreeMinVal = minValue(currentNode.right);
+            currentNode.value = subTreeMinVal;
+            currentNode.right = deleteNode(currentNode.right, subTreeMinVal);
         }
-        return currentNode;
+        return currentNode; // to propagate back recursion chain
     }
     
     public void deleteNode(int value) { // method overloading
