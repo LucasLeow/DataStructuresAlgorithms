@@ -1,0 +1,26 @@
+====================================================================================================
+Tree Traversal
+====================================================================================================
+    
+        - traverse every value in a tree & put values in arraylist
+        - multiple ways to traverse a tree
+            - Breadth First Search (traverse level by level, completing all rows first)
+            - Depth First Search (traverse left-subtree first then right) (3 ways to perform Depth First Search)
+                - Pre-Order
+                - Post-Order
+                - In-Order
+
+====================================================================================================
+Breadth-First Search
+====================================================================================================
+
+    - using queue data structure
+        - init queue & arraylist for result
+    1) enqueue root node
+    2) dequeue node value to results array list
+    3) enqueue left & right child node to queue
+    4) dequeue left child node
+    5) enqueue left & right child node of the dequeued left node (if any)
+    - repeat process until all nodes visited
+
+    * once queue empty, all values printed
