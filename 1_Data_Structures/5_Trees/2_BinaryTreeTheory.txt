@@ -42,8 +42,6 @@ What problem Binary tree solve
     - Implemented by "Set" data structure (only unique values)
         - using Binary Search Trees
 
-
-
 == Time complexity (Binary Search Tree) ==
     Searching: O(logN)
     Inserting: O(logN)
@@ -55,7 +53,6 @@ What problem Binary tree solve
         - in order traversal
         - pre order traversal
         - post order traversal
-
 
 ============================================================================================
 Binary Search Trees
@@ -69,7 +66,7 @@ Binary Search Trees
         - all nodes branching rightwards will be greater
 
 ============================================================================================
-Binary Search Trees Big O
+Binary Search Trees Time Complexity
 ============================================================================================
     - Each level consist of 2^n - 1 nodes (n = depth)
     - insertion & deletion = O(log n) (Best case for Perfect BST)
@@ -77,6 +74,6 @@ Binary Search Trees Big O
             - if lower, go left branch
             - if higher, go right branch
 
-    * worst case = BST that always have nodee values higher the previous
+    * worst case = BST that always have node values higher the previous
         - then BST becomes a linkedlist (only have right branches)
         - insertion & deletion is O(n)
