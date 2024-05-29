@@ -41,3 +41,9 @@ Depth-First Search (Post-order)
     - traverse to the deepest left-node first, then append value to list
     - then go back to higher level and check right subtree
     - left-right-center
+
+====================================================================================================
+Depth-First Search (In-order)
+====================================================================================================
+
+    - left - center - right

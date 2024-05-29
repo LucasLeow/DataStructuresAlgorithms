@@ -43,4 +43,21 @@ public class DepthFirstSearch {
         new Traverse(this.root);
         return results;
     }
+
+    public ArrayList<Integer> DFSInOrder() {
+        ArrayList<Integer> results = new ArrayList<>();
+        class Traverse {
+            public Traverse(Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                results.add(currentNode.value);
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+        new Traverse(this.root);
+        return results;
+    }
 }
