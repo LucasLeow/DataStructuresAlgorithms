@@ -10,11 +10,12 @@ public class DepthFirstSearch {
             this.value = val;
         }
     }
-    public ArrayList<Integer> DFSPreOrder() {
+
+    public ArrayList<Integer> DFSPreOrder() {  // append value first, then traverse left, then traverse right
         ArrayList<Integer> results = new ArrayList<>();
-        class Traverse { // create class so can nest method within method in java
+        class Traverse { // create class so can nest method within method in java for purpose of recursion
             public Traverse(Node currentNode) {
-                results.add(currentNode.value);
+                results.add(currentNode.value); // append value first, then traverse
                 if (currentNode.left != null) {
                     new Traverse(currentNode.left); // need new keyword since its constructor
                 }

@@ -1,0 +1,47 @@
+============================================================================================================
+Convert Binary Number in LinkedList to Integer
+============================================================================================================
+    Given : 1 -> 0 -> 1 -> 1 -> 0 = 22 in decimal
+
+    2^4 + 2^2 + 2^1 = 22
+
+    Logic:
+        - For every 1 digit rightwards, sum is multiplied by 2 
+        - while node is not null
+        - first multiply sum by 2
+        - then we add value of binary digit
+            - if encounter 0, sum is not incremented but still multiplied by 2
+    
+        public int getDecimalValue(ListNode head) {
+            ListNode temp = head;
+            int sum = 0;
+
+            while (temp != null) {
+                sum *= 2;
+                sum += temp.val;
+                temp = temp.next;
+            }
+        }
+
+
+============================================================================================================
+Find middle of LinkedList
+============================================================================================================
+    - If 1 -> 2 -> 3 -> 4 -> 5, return Node 3
+    - if 1 -> 2 -> 3 -> 4 -> 5 -> 6, return Node 4
+
+    Solution: Rabbit & tortoise algorithm (slow & fast pointer)
+    
+        public ListNode middleNode(ListNode head) {
+            ListNode slow = head;
+            ListNode fast = head;
+
+        while (fast.next != null) {
+            slow = slow.next;
+            if (fast.next.next == null) {
+                break;
+            }
+            fast = fast.next.next;
+        }
+        return slow;
+        }

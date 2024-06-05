@@ -1,0 +1,57 @@
+============================================================================================
+General Trees
+============================================================================================
+    - A tree is a non-linear data structure consisting of a collection of nodes to store data
+    - Trees are hierarchical data structures
+
+    - Normal trees can have unlimited number of pointers pointing to other nodes
+    - instead of "next" pointer, has "left" & "right", "center" etc... pointer
+
+    - each child node can only have single parent
+    - Trees are considered recursive data structure
+
+============================================================================================
+Different types of Trees
+============================================================================================
+    1) Binary Tree
+        - nodes have at most 2 children (left & right)
+            - Complete Binary Tree
+                - all levels filled except possible the last level (which should be filled from left to right)
+                - any skipped node at last level will make it incomplete
+            - Perfect Binary Tree
+                - all levels filled completely (even last level)
+            - Balanced Binary Tree (height-balanced tree)
+                - height of left & right subtrees height differ by not more than 1
+
+    2) Ternary Tree
+        - nodes have at most 3 children
+
+    3) N-ary Tree
+        - nodes can have many children (number of nodes exactly is unknown)
+    
+============================================================================================
+Special types of Trees
+============================================================================================
+
+============================================================================================
+Tree Terminologies
+============================================================================================
+    - Degree
+        - Number of children of a particular parent. 2 children = 2 degree, 0 children = 0 degree
+
+    - Level
+        - root node is at level 0
+
+    - Full Binary Tree
+        - Every node either points to 2 other nodes or point to no nodes at all (leaf node)
+
+    - Complete Binary Tree
+        - all levels except (possibly) last are filled, with nodes as left as possible
+
+    - Perfect Binary Tree
+        - Every node at every level of the tree is completely filled across
+
+    - Leaf Node
+        - node that does not have any children
+
+    - parent | child | sibling nodes

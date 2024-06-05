@@ -1,6 +1,5 @@
 public class BinarySearchTree {
-    Node root; // need root pointer to point to first Node, else garbage collected
-    // cannot be private, else cannot be used by other class
+    Node root; // root pointer to first Node of tree
     class Node {
         int value;
         Node left;

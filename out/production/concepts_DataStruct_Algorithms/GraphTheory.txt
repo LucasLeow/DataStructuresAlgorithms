@@ -1,0 +1,118 @@
+================================================================================================
+Graphs
+================================================================================================
+    Vertex:
+        - nodes storing data
+        - nodes are known as vertex in graphs
+        - multiple nodes = vertices
+
+    Edge:
+        - connection between 2 vertices
+        - represented by a line
+
+        - edges can be weighted or unweighted (cost)
+
+        - directionality:
+            - if edge no arrows, bi-directionality assumed (can traverse both ways)
+            - if arrow-head present, can only travel in given direction
+
+    - There are no limits to how many edges a vertex can have
+
+================================================================================================
+Graph Representation (How to show graph using code)
+================================================================================================
+
+    1) Adjacency Matrix (1 way to represent graph)
+
+        (unweighted graph)
+        - 1 means adjacency occurs between given vertices
+        - 0 means no adjacency occurs between given vertices
+
+            A B C D E
+          A 0 1 0 0 1
+          B 1 0 1 0 0
+          C 0 1 0 1 0
+          D 0 0 1 0 1
+          E 1 0 0 1 0
+
+        * Symmetry will only occur for bidirectional graphs
+        * If edges are weighted, weights will be stored in matrix
+
+        (weighted graph)
+            A B C D E
+          A 0 2 0 0 10
+          B 2 0 1 0 0
+          C 0 1 0 1 0
+          D 0 0 1 0 8
+          E 10 0 0 8 0
+
+    2) Adjacency List (Another way to represent graph)
+        - represented using hashmap
+            - key is the vertex of interest
+            - value is other vertices it is adjacent to
+
+        {
+            "A" = ["B", "E"],
+            "B" = ["A", "C"],
+            "C" = ["B", "D"],
+            "D" = ["C", "E"],
+            "E" = ["D", "A"]
+        }
+
+================================================================================================
+Space Complexity of Graph Representation
+================================================================================================
+
+    - Adjacency Matrix
+        - Space Complexity: O(|V|^2)
+        - need to consider all edges twice (including non-adjacent ones)
+        - inefficient for very large graph (space wasted for unrelated vertices)
+
+    - Adjacency List
+        - Space Complexity O(|V| + |E|)
+        - only consider vertex & its adjacent vertices
+
+================================================================================================
+Time Complexity of Graph Representation
+================================================================================================
+
+    - Adjacency Matrix (Not recommended way to show graph)
+        - Adding new vertex = O(|V|^2)
+            - stored in arrays, adding new edges = need to create new arrays + account non-adjacent vertices)
+
+        - Remove vertex = O(|V|^2)
+            - need to remove vertex row & column
+            - need to rewrite array
+
+        - Add new edge = O(1)
+            - just update existing value from 0 to 1 or to appropriate weight
+
+        - Remove edge = O(1)
+            - just update existing weight from 1 to 0
+
+    - Adjacency List (Recommended way to show graph)
+        - Adding new vertex = O(1)
+            - simply adding new key in HashTable
+
+        - Remove Vertex = O(|V| + |E|)
+            - need to touch every vertex & every edge to check & remove
+
+        - Add new edge = O(1)
+            - just update existing hashtable value
+
+        Remove edge = O(|E|)
+            - remove vertex key is O(1)
+            - But need to loop through ArrayList which will touch every edge
+
+================================================================================================
+Graph Traversal
+================================================================================================
+
+    1) Shortest Path
+        - typically for unweighted edges
+        - want to travel shortest distance between edges
+
+    2) Lowest Weight
+        - typically for weighted edge (each edge have a given cost)
+        - want to travel path with lowest cost
+        - distance may not be shortest but cost will be lowest
