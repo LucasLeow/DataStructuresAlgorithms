@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/1_Data_Structures/8_Heaps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/2_Algorithms/Recursion/code" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/1_Data_Structures/5_Trees" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/2_Algorithms/BackTracking" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

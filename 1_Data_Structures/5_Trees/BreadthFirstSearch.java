@@ -16,7 +16,7 @@ public class BreadthFirstSearch {
     public ArrayList<Integer> BFS() {
 
         Node currentNode = root;
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Node> queue = new LinkedList<>(); // Linkedlist implementation of Queue structure
         ArrayList<Integer> results = new ArrayList<>();
 
         queue.add(currentNode);

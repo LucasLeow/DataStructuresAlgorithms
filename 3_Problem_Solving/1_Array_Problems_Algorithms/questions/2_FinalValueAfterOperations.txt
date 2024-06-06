@@ -1,0 +1,22 @@
+===============================================================================================
+Final Value After Performing Operations
+===============================================================================================
+
+    Given an array of strings operations, return the final value of X after performing all the operations.
+    Initially, the value of X is 0.
+    Input: operations = ["--X","X++","X++"]
+    Output: 1
+    -1, 0, 1
+
+
+    class Solution {
+        public int finalValueAfterOperations(String[] operations) {
+            int x = 0;
+
+            for (String ops: operations) {
+                if (ops.substring(1, 2).equals("+")) x++;
+                else x--;
+            }
+            return x;
+        }
+    }
