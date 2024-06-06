@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="109a4d4f-4be0-441a-84f7-050fb6c1058c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/2_Algorithms/BackTracking/ArraySubsets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/2_FinalValueAfterOperations.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/3_NumberOfGoodPairs.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/concepts_DataStruct_Algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/concepts_DataStruct_Algorithms.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/4_ShuffleTheArray.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Data_Structures/5_Trees/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/1_Data_Structures/5_Trees/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_Algorithms/BackTracking/BackTracking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/1_ConcatenationOfArray.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/ArrayQuestions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/ArrayQuestions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/ArrayQuestions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems_Algorithms/questions/ArrayQuestions.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
