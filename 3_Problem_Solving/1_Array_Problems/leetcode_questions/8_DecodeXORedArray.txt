@@ -1,0 +1,32 @@
+===============================================================================================
+Decode XOR-ed Array
+===============================================================================================
+    
+    There is a hidden integer array arr that consists of n non-negative integers.
+    It was encoded into another integer array encoded of length n - 1
+    encoded[i] = arr[i] XOR arr[i + 1]. For example, if arr = [1,0,2,1], then encoded = [1,2,3].
+    You are given the encoded array and an integer first, the first element of arr, i.e. arr[0].
+
+    Input: encoded = [6,2,7,3], first = 4
+    Output: [4,2,0,7,4]
+
+    Logic: 
+        - The Inverse of XOR is XOR itself
+
+        1. output[0] = first
+        2. output[1] = output[0] ^ encoded[0]
+        3. output[2] = output[1] ^ encoded[1] 
+        4. output[3] = output[2] ^ encoded[2]
+        5. repeat until output ends
+    
+    class Solution {
+        public int[] decode(int[] encoded, int first) {
+            int[] decoded = new int[encoded.length + 1];
+
+            decoded[0] = first;
+            for(int i = 0; i < encoded.length; i++) {
+                decoded[i + 1] = decoded[i] ^ encoded[i];
+            }
+            return decoded;
+        }
+    }
