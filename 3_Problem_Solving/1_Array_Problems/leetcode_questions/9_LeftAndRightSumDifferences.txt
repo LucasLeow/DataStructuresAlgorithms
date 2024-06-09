@@ -1,0 +1,58 @@
+==========================================================================================
+Left And Right Sum Differences
+==========================================================================================
+    
+    Given a 0-indexed integer array nums, find a 0-indexed integer array answer where:
+    answer.length == nums.length.
+    answer[i] = |leftSum[i] - rightSum[i]|.
+
+    leftSum[i] is the sum of elements to the left of the index i in the array nums. 
+    If there is no such element, leftSum[i] = 0.
+
+    rightSum[i] is the sum of elements to the right of the index i in the array nums. 
+    If there is no such element, rightSum[i] = 0.
+
+    Input: nums = [10,4,8,3]
+    Output: [15,1,11,22]
+    Explanation: The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0].
+    The array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].
+
+    Logic:
+        - declare 2 variables leftSum & rightSum to accumulate value
+        - first iterate downwards to get rightSum
+        - next iterate upwards to get leftSum while also subtracting rightSum to populate values
+        
+        class Solution {
+            public int[] leftRightDifference(int[] nums) {
+                if (nums.length <= 1) return new int[] {0};
+
+                int[] leftSumArr = new int[nums.length];
+                int[] rightSumArr = new int[nums.length];
+                int[] ans = new int[nums.length];
+
+                int leftSum = 0, rightSum = 0;
+                leftSumArr[0] = leftSum;
+                rightSumArr[nums.length - 1] = rightSum;
+
+                // iterate downwards to accumulate rightSum
+                for (int i = nums.length - 1; i > 0; i--) {
+                    rightSum += nums[i];
+                } 
+
+                // iterate upwards to accumulate leftSum, while subtracting rightSum
+                for (int j = 1; j < nums.length; j++) {
+                    leftSum += nums[j - 1];
+                    leftSumArr[j] = leftSum;
+
+                    rightSumArr[j - 1] = rightSum;
+                    rightSum -= nums[j];
+                }
+
+                // iterate again to get ans arr
+                for (int k = 0; k < nums.length; k++) {
+                    ans[k] = Math.abs(leftSumArr[k] - rightSumArr[k]);
+                }
+
+                return ans;
+            }
+        }
