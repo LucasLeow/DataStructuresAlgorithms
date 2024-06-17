@@ -1,0 +1,39 @@
+==========================================================================================
+Create Target Array
+==========================================================================================
+
+Given two arrays of integers nums and index, create target array under the following rules:
+
+Initially target array is empty.
+From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array.
+Repeat the previous step until there are no elements to read in nums and index.
+
+Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+Output: [0,4,1,3,2]
+
+    - index arr provide the index to insert into target array
+    - nums arr provide the value to be inserted
+
+    Logic:
+        - shift value rightwards first
+        - insert value to appropriate index in target array
+
+
+    class Solution {
+        public int[] createTargetArray(int[] nums, int[] index) {
+            int[] target = new int[nums.length];
+
+            for (int i = 0; i < nums.length; i++) {
+
+                // shift elements rightwards starting rightwards (if any)
+                for (int j = i; j > index[i]; j--) {
+                    target[j] = target[j - 1];
+                }
+
+                // insert value at desired idx after shifting
+                target[index[i]] = nums[i];
+
+            }
+            return target;
+        }
+    }

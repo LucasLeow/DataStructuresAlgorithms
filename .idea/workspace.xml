@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="109a4d4f-4be0-441a-84f7-050fb6c1058c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems/leetcode_questions/7_MaxNumWordsFoundInSentence.txt" beforeDir="false" afterPath="$PROJECT_DIR$/3_Problem_Solving/1_Array_Problems/leetcode_questions/7_MaxNumWordsFoundInSentence.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "H:/SelfLearning/concepts_DataStruct_Algorithms",
+    "last_opened_file_path": "H:/SelfLearning/language_java",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Code With Me"
   }
 }]]></component>
