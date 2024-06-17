@@ -1,0 +1,46 @@
+==========================================================================================
+Decompress Run-Length Encoded List
+==========================================================================================
+
+    We are given a list nums of integers representing a list compressed with run-length encoding.
+
+    Input: nums = [1,2,3,4]
+    Output: [2,4,4,4]
+
+    Explanation: The first pair [1,2] means we have freq = 1 and val = 2 so we generate the array [2].
+    The second pair [3,4] means we have freq = 3 and val = 4 so we generate [4,4,4].
+    At the end the concatenation [2] + [4,4,4] is [2,4,4,4].
+
+    Logic:
+        1. every even idx for nums arr is the frequency, get sum of frequency first to determine results arr size
+        2. iterate using for loop & increment i by 2 per iteration
+        3. run inner loop up to frequency & utilize an external idx pointer to fill results array
+
+
+        class Solution {
+            public int[] decompressRLElist(int[] nums) {
+                int size = 0;
+                int freq, val;
+                
+                // get size using frequency
+                for (int i = 0; i < nums.length; i++) {
+                    if (i % 2 == 0) size += nums[i];
+                }
+
+                int[] results = new int[size];
+                int idx = 0; // external pointer to fill results arr
+
+                // increment i by 2 per iteration
+                for (int i = 0; i < nums.length; i+=2) {
+                    freq = nums[i];
+                    val = nums[i + 1];
+
+                    // loop up to freq
+                    for (int j = 0; j > freq; j++) {
+                        results[idx] = val;
+                        idx++; // increment idx for every freq increase
+                    }
+                }
+                return results;
+            }
+        }
