@@ -1,0 +1,59 @@
+====================================================================================================
+Anagram Groups
+====================================================================================================
+Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
+
+An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+Example 1:
+
+Input: strs = ["act","pots","tops","cat","stop","hat"]
+
+Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
+Example 2:
+
+Input: strs = ["x"]
+
+Output: [["x"]]
+Example 3:
+
+Input: strs = [""]
+
+Output: [[""]]
+Constraints:
+
+1 <= strs.length <= 1000.
+0 <= strs[i].length <= 100
+strs[i] is made up of lowercase English letters.
+
+====================================================================================================
+
+Solution:
+
+    - using HashMap,
+        - key as combinations of character counts in String eg: "[1, 1, 1, 0...]" representing 'a' 'b' 'c'
+        - value as list of anagrams eg: ["cab", "abc"]
+
+    class Solution {
+        public List<List<String>> groupAnagrams(String[] strs) {
+            HashMap<String, List<String>> ans = new HashMap<>();
+
+            for (String s: strs) {
+                int[] charCount = new int[26];
+
+                for (char c: s.toCharArray()) {
+                    charCount[c - 'a']++;
+                }
+
+                String key = Arrays.toString(charCount);
+
+                if (!ans.containsKey(key)) {
+                    ans.put(key, new ArrayList<String>());
+                }
+
+                ans.get(key).add(s);
+            }
+
+            return new ArrayList<>(ans.values());
+        }
+    }
